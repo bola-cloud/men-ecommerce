@@ -1,13 +1,13 @@
 <?php return array (
   'admin_panel' => 
   array (
-    'active' => '0',
-    'name' => 'Test User',
-    'identifier' => 'test@gmail.com',
-    'username' => 'test_user',
-    'purchase_key' => 'test_user',
+    'active' => '1',
+    'name' => 'Abdelrahman Hossam',
+    'identifier' => 'abdelrahman.hossaam@gmail.com',
+    'username' => 'abdelrahmanhossaam',
+    'purchase_key' => 'e11dccb0-d8e0-4551-a2ca-7f11feed50da',
     'software_id' => 'MzE0NDg1OTc=',
-    'domain' => '6valley-testing.6amdev.xyz',
+    'domain' => 'men.wasl-x.com',
     'software_type' => 'product',
     'errors' => 
     array (

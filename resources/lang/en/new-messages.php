@@ -2431,4 +2431,5 @@ ____________________________________________________on_search_engines_and_see_th
 	"See_less" => "See less",
 	"you_can_not_update_this_on_demo_mode" => "You can not update this on demo mode",
 	"auction_next_bidder" => "Auction next bidder",
+	"_we_are_always_happy_to_help" => " we are always happy to help",
 ];
