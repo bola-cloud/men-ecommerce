@@ -101,6 +101,7 @@ class AppServiceProvider extends ServiceProvider
                     $publishingHouses = $hasPublishingHouses ? Cache::remember(CACHE_PROVIDER_PUBLISHING_HOUSES_LIST, 3600, fn() => ProductManager::getPublishingHouseList()) : null;
 
                     $systemColors = getWebConfig('colors');
+                    $systemColors = is_array($systemColors) ? $systemColors : [];
                     $web_config = [
                         'primary_color' => $systemColors['primary'] ?? '',
                         'secondary_color' => $systemColors['secondary'] ?? '',
