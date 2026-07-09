@@ -898,7 +898,7 @@
                     </ul>
                 </li>
 
-                <li class="{{ Request::is('admin/delivery-man*') ? 'sub-menu-opened' : '' }}">
+                {{-- <li class="{{ Request::is('admin/delivery-man*') ? 'sub-menu-opened' : '' }}">
                     <a class="nav-link nav-link-toggle text-capitalize {{ Request::is('admin/delivery-man*') ? 'active' : '' }}"
                        href="javascript:"
                        title="{{ translate('delivery_men') }}">
@@ -941,7 +941,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
                 @if(auth('admin')->user()->admin_role_id==1)
                     <li class=" {{ (Request::is('admin/employee*') || Request::is('admin/custom-role*')) ? 'sub-menu-opened' : '' }}">
@@ -1291,7 +1291,7 @@
                 </li>
             @endif
 
-            @if(Helpers::module_permission_check('themes_and_addons'))
+            <!-- @if(Helpers::module_permission_check('themes_and_addons'))
                 <li class="nav-item nav-item_title">
                     <small class="nav-subtitle" title="">
                         {{ translate('Themes_&_Addons') }}
@@ -1365,7 +1365,7 @@
                     </li>
                 @endif
 
-            @endif
+            @endif -->
 
             <?php $checkSetupGuideRequirements = checkSetupGuideRequirements(panel: 'admin'); ?>
 
