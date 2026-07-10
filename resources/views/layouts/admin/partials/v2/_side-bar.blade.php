@@ -736,6 +736,7 @@
                 </div>
             @endif
 
+            {{--
             @if (Helpers::module_permission_check('system_settings'))
                 <div class="v2-ctx-group">
                     <div class="v2-ctx-group-head"><span>{{ translate('System_Settings') }}</span></div>
@@ -757,7 +758,9 @@
                     </a>
                 </div>
             @endif
+            --}}
 
+            {{--
             @if (Helpers::module_permission_check('3rd_party_setup'))
                 <div class="v2-ctx-group">
                     <div class="v2-ctx-group-head"><span>{{ translate('3rd_Party_Setup') }}</span></div>
@@ -785,6 +788,7 @@
                     </a>
                 </div>
             @endif
+            --}}
 
             @if (count($v2ThemeRoutes) > 0)
                 @php
@@ -829,6 +833,7 @@
                 @endif
             @endif
 
+            {{--
             @if (Helpers::module_permission_check('themes_and_addons'))
                 <div class="v2-ctx-group">
                     <div class="v2-ctx-group-head"><span>{{ translate('Themes_&_Addons') }}</span></div>
@@ -858,6 +863,7 @@
                     @endif
                 </div>
             @endif
+            --}}
         </div>
     @endif
 
