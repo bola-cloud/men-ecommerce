@@ -1144,7 +1144,7 @@
                 </li>
             @endif
 
-            @if(Helpers::module_permission_check('system_settings'))
+            <!-- @if(Helpers::module_permission_check('system_settings'))
                 <li class="nav-item nav-item_title">
                     <small class="nav-subtitle" title="">
                         {{ translate('System_Settings') }}
@@ -1209,9 +1209,9 @@
                         </span>
                     </a>
                 </li>
-            @endif
+            @endif -->
 
-            @if(Helpers::module_permission_check('3rd_party_setup'))
+            <!-- @if(Helpers::module_permission_check('3rd_party_setup'))
                 <li class="nav-item nav-item_title">
                     <small class="nav-subtitle" title="">
                         {{ translate('3rd_Party_Setup') }}
@@ -1289,7 +1289,7 @@
                         </span>
                     </a>
                 </li>
-            @endif
+            @endif -->
 
             <!-- @if(Helpers::module_permission_check('themes_and_addons'))
                 <li class="nav-item nav-item_title">
