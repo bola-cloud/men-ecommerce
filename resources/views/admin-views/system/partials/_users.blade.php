@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-6">
+        {{-- <div class="col-xl-6">
             <div class="card bg-body h-100">
                 <div class="card-header border-0 shadow-sm d-flex align-items-center justify-content-between gap-3">
                     <h4 class="d-flex align-items-center text-capitalize gap-10 mb-0">
@@ -122,6 +122,6 @@
                     @endif
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>

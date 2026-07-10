@@ -591,7 +591,7 @@ $shop = Shop::where(['seller_id' => auth('seller')->id()])->first();
                             </a>
                         </li>
 
-                        <li class="nav-item {{ Request::is('vendor/delivery-man*') ? 'scroll-here' : '' }}">
+                        {{-- <li class="nav-item {{ Request::is('vendor/delivery-man*') ? 'scroll-here' : '' }}">
                             <small class="nav-subtitle">{{ translate('delivery_man_management') }}</small>
                             <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                         </li>
@@ -638,7 +638,7 @@ $shop = Shop::where(['seller_id' => auth('seller')->id()])->first();
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
 
                         <?php $checkSetupGuideRequirements = checkSetupGuideRequirements(panel: 'vendor'); ?>
 

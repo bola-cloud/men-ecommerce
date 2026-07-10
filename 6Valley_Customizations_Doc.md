@@ -68,6 +68,25 @@ $systemColors = is_array($systemColors) ? $systemColors : [];
 
 ---
 
+## 4. إخفاء نظام "مندوبي التوصيل" (Delivery Men) من باقي واجهات النظام
+**وصف المشكلة:** استكمالاً لعملية تبسيط واجهات النظام وإزالة نظام التوصيل، تم إخفاء أيقونات وقوائم إدارة مندوبي التوصيل من لوحة تحكم البائعين (Vendors) ومن واجهات تفاصيل الطلبات والمحادثات لكلا من الإدارة والبائعين.
+
+**الملفات المعدلة:**
+- `resources/views/admin-views/system/partials/_users.blade.php`: إخفاء ويدجيت "Top Delivery Man" من لوحة تحكم الإدارة.
+- `resources/views/vendor-views/dashboard/index.blade.php` و `resources/views/vendor-views/partials/_top-rated-delivery-man.blade.php`: إخفاء ويدجيت "Top Rated Delivery Man" من لوحة تحكم البائع.
+- `resources/views/admin-views/order/order-details.blade.php`: إخفاء قائمة تعيين مندوب توصيل (Assign delivery man) في تفاصيل طلب الإدارة.
+- `resources/views/vendor-views/order/order-details.blade.php`: إخفاء قائمة تعيين مندوب توصيل (Assign delivery man) في تفاصيل طلب البائع.
+- `resources/views/admin-views/chatting/index.blade.php`: إخفاء تبويب "Delivery Men" من واجهة المحادثات للإدارة.
+- `resources/views/vendor-views/chatting/index.blade.php`: إخفاء تبويب "Delivery Men" من واجهة المحادثات للبائعين.
+- `resources/views/layouts/vendor/partials/_side-bar.blade.php`: إخفاء قائمة "Delivery Man" من القائمة الجانبية للبائع (v1).
+- `resources/views/layouts/vendor/partials/v2/_side-bar.blade.php`: إخفاء قائمة "Delivery Man" من القائمة الجانبية للبائع (v2).
+- `resources/views/layouts/vendor/partials/v2/_header.blade.php`: إخفاء قائمة محادثات "Delivery Man" من رأس الصفحة للبائع (v2).
+
+**التفاصيل:**
+تم استخدام التعليقات البرمجية `{{-- ... --}}` لتهميش الأكواد المسؤولة عن عرض هذه الواجهات لتجنب حذفها نهائياً مما يسمح باستعادتها في المستقبل في حال الحاجة لذلك.
+
+---
+
 ## 📝 ملاحظات هامة لك مستقبلاً:
 1. **لاسترجاع الدليفري (Delivery Men):** كل ما عليك هو فتح ملفات الـ `blade` المذكورة أعلاه، وإزالة علامات التعليق `{{--` و `--}}` ليعود كل شيء للظهور في لوحة التحكم.
 2. **عند رفع الكود للسيرفر أو إضافة كلاسات جديدة:** تذكر دائماً تنفيذ أمر `composer dump-autoload` ليقوم السيرفر بقراءة مسارات الكلاسات الجديدة مثل `MenFashionSeeder`.

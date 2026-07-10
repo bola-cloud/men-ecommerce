@@ -420,7 +420,7 @@
             <div class="v2-ctx-group-body"></div>
         </div>
 
-        <div class="v2-ctx-group">
+        {{-- <div class="v2-ctx-group">
             <div class="v2-ctx-group-head"><span>{{ translate('deliveryman') }}</span></div>
 
             <a class="v2-nav-item {{ Request::is('vendor/delivery-man/index') ? 'v2-is-active' : '' }}" data-item="v-dm-add" href="{{ route('vendor.delivery-man.index') }}">
@@ -439,7 +439,7 @@
                 <span class="v2-nav-btn"><span class="v2-nav-label">{{ translate('emergency_contact') }}</span></span>
                 <div class="v2-nav-right"><button class="v2-pin-btn" type="button" data-pin="v-dm-emergency" aria-label="Pin"></button></div>
             </a>
-        </div>
+        </div> --}}
 
         <div class="v2-ctx-group">
             <div class="v2-ctx-group-head"><span>{{ translate('support') }}</span></div>

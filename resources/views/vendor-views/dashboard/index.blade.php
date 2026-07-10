@@ -137,11 +137,11 @@
                     @include('vendor-views.partials._top-selling-products',['topSell'=>$dashboardData['topSell']])
                 </div>
             </div>
-            <div class="col-12">
+            {{-- <div class="col-12">
                 <div class="card h-100 remove-card-shadow">
                     @include('vendor-views.partials._top-rated-delivery-man',['topRatedDeliveryMan'=>$dashboardData['topRatedDeliveryMan']])
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <span id="withdraw-method-url" data-url="{{ route('vendor.dashboard.method-list') }}"></span>

@@ -967,7 +967,7 @@
                                         </select>
                                     </li>
                                     @if(!$disableDeliveryType)
-                                        <li id="choose_delivery_man" class="mt-3 choose_delivery_man">
+                                        {{-- <li id="choose_delivery_man" class="mt-3 choose_delivery_man">
                                             <label for="" class="font-weight-bold title-color fz-14">
                                                 {{translate('delivery_man')}}
                                             </label>
@@ -1046,7 +1046,7 @@
                                                        id="expected_delivery_date"
                                                        class="form-control set-today-date-minimum deliveryDateUpdate" {{ $order->order_status == 'delivered'? 'disabled' : 'required' }} >
                                             </li>
-                                        @endif
+                                        @endif --}}
                                         <li class="mt-1" id="by_third_party_delivery_service_info">
                                             <div class="p-2 bg-light rounded mt-3">
                                                 <div class="media m-1 gap-3">

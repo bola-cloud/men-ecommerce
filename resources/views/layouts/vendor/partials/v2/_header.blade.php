@@ -205,12 +205,12 @@
                         <span class="v2-item-count">{{ $v2VendorMsgCustomer }}</span>
                     @endif
                 </a>
-                <a class="v2-dropdown-item" href="{{ route('vendor.messages.index', ['type' => 'delivery-man']) }}">
+                {{-- <a class="v2-dropdown-item" href="{{ route('vendor.messages.index', ['type' => 'delivery-man']) }}">
                     <span>{{ translate('delivery_man') }}</span>
                     @if ($v2VendorMsgDeliveryMan > 0)
                         <span class="v2-item-count">{{ $v2VendorMsgDeliveryMan }}</span>
                     @endif
-                </a>
+                </a> --}}
             </div>
         </div>
 
