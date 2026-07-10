@@ -713,7 +713,7 @@
                         </div>
                     @endif
 
-                    <a class="v2-nav-item {{ Request::is('admin/pages-and-media/vendor-registration-settings/*') ? 'v2-is-active' : '' }}" data-item="vendor-registration" href="{{ route('admin.pages-and-media.vendor-registration-settings.index') }}">
+                    <!-- <a class="v2-nav-item {{ Request::is('admin/pages-and-media/vendor-registration-settings/*') ? 'v2-is-active' : '' }}" data-item="vendor-registration" href="{{ route('admin.pages-and-media.vendor-registration-settings.index') }}">
                         <span class="v2-nav-btn"><span class="v2-nav-label">{{ translate('vendor_Registration') }}</span></span>
                         <div class="v2-nav-right"><button class="v2-pin-btn" type="button" data-pin="vendor-registration" aria-label="Pin"></button></div>
                     </a>
@@ -732,7 +732,7 @@
                     <a class="v2-nav-item {{ (Request::is('admin/seo-settings/web-master-tool') || Request::is('admin/seo-settings/robot-txt') || Request::is('admin/seo-settings/sitemap') || Request::is('admin/seo-settings/robots-meta-content*') || Request::is('admin/seo-settings/error-logs/index')) ? 'v2-is-active' : '' }}" data-item="seo" href="{{ route('admin.seo-settings.web-master-tool') }}">
                         <span class="v2-nav-btn"><span class="v2-nav-label">{{ translate('SEO_Settings') }}</span></span>
                         <div class="v2-nav-right"><button class="v2-pin-btn" type="button" data-pin="seo" aria-label="Pin"></button></div>
-                    </a>
+                    </a> -->
                 </div>
             @endif
 
