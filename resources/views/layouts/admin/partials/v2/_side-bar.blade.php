@@ -41,6 +41,7 @@
     </div>
 
     {{-- ================= CATALOG ================= --}}
+    {{--
     @if (Helpers::module_permission_check('catalog'))
         <div class="v2-ctx-section" data-section="catalog">
             <div class="v2-ctx-head"><div class="v2-ctx-title">{{ translate('catalog') }}</div></div>
@@ -153,6 +154,7 @@
             </div>
         </div>
     @endif
+    --}}
 
     {{-- ================= ORDERS ================= --}}
     @if (Helpers::module_permission_check('orders'))
@@ -344,6 +346,7 @@
     @endif
 
     {{-- ================= MARKETING ================= --}}
+    {{--
     @if (Helpers::module_permission_check('marketing'))
         <div class="v2-ctx-section" data-section="marketing">
             <div class="v2-ctx-head"><div class="v2-ctx-title">{{ translate('marketing') }}</div></div>
@@ -443,8 +446,10 @@
             @endif
         </div>
     @endif
+    --}}
 
     {{-- ================= PEOPLE ================= --}}
+    {{--
     @if (Helpers::module_permission_check('people'))
         <div class="v2-ctx-section" data-section="people">
             <div class="v2-ctx-head"><div class="v2-ctx-title">{{ translate('people') }}</div></div>
@@ -561,8 +566,10 @@
             @endif
         </div>
     @endif
+    --}}
 
     {{-- ================= REPORTS ================= --}}
+    {{--
     @if (Helpers::module_permission_check('reports'))
         <div class="v2-ctx-section" data-section="reports">
             <div class="v2-ctx-head"><div class="v2-ctx-title">{{ translate('reports') }}</div></div>
@@ -661,6 +668,7 @@
             @endif
         </div>
     @endif
+    --}}
 
     {{-- ================= SETTINGS ================= --}}
     @if (Helpers::module_permission_check('business_settings') || Helpers::module_permission_check('system_settings') || Helpers::module_permission_check('3rd_party_setup') || Helpers::module_permission_check('themes_and_addons'))

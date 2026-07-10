@@ -24,6 +24,7 @@
             </button>
         @endif
 
+        {{--
         @if ($v2HasCatalog)
             <button class="v2-rail-btn" type="button" data-section="catalog" data-label="{{ translate('catalog') }}" aria-label="{{ translate('catalog') }}">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -33,6 +34,7 @@
                 </svg>
             </button>
         @endif
+        --}}
 
         @if ($v2HasOrders)
             <button class="v2-rail-btn" type="button" data-section="orders" data-label="{{ translate('orders') }}" aria-label="{{ translate('orders') }}">
@@ -55,6 +57,7 @@
             </button>
         @endif
 
+        {{--
         @if ($v2HasMarketing)
             <button class="v2-rail-btn" type="button" data-section="marketing" data-label="{{ translate('marketing') }}" aria-label="{{ translate('marketing') }}">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -65,7 +68,9 @@
                 </svg>
             </button>
         @endif
+        --}}
 
+        {{--
         @if ($v2HasPeople)
             <button class="v2-rail-btn" type="button" data-section="people" data-label="{{ translate('people') }}" aria-label="{{ translate('people') }}">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -77,7 +82,9 @@
                 </svg>
             </button>
         @endif
+        --}}
 
+        {{--
         @if ($v2HasReports)
             <button class="v2-rail-btn" type="button" data-section="reports" data-label="{{ translate('reports') }}" aria-label="{{ translate('reports') }}">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -87,6 +94,7 @@
                 </svg>
             </button>
         @endif
+        --}}
 
         @if ($v2HasSettings)
             <button class="v2-rail-btn" type="button" data-section="settings" data-label="{{ translate('settings') }}" aria-label="{{ translate('settings') }}">
