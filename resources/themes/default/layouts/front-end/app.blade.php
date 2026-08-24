@@ -70,43 +70,27 @@
         }
 
         /* --- Dark Mode Customizations for Monochrome Theme --- */
-        [data-theme="dark"], 
-        [data-bs-theme="dark"],
-        .theme-dark, 
-        .dark-theme, 
-        .dark-mode {
+        body[theme="dark"] {
             --base: #FFFFFF !important;
             --bs-base-rgb: 255, 255, 255 !important;
             --web-primary: #FFFFFF !important;
             --web-primary-rgb: 255, 255, 255 !important;
         }
 
-        [data-theme="dark"] .btn--primary,
-        [data-theme="dark"] .bg-primary,
-        [data-theme="dark"] .category-menu-toggle-btn,
-        .theme-dark .btn--primary,
-        .theme-dark .bg-primary,
-        .theme-dark .category-menu-toggle-btn,
-        .dark-theme .btn--primary,
-        .dark-theme .bg-primary,
-        .dark-theme .category-menu-toggle-btn {
+        body[theme="dark"] .btn--primary,
+        body[theme="dark"] .bg-primary,
+        body[theme="dark"] .category-menu-toggle-btn {
             background-color: #FFFFFF !important;
             color: #000000 !important;
         }
 
-        [data-theme="dark"] .btn--primary:hover,
-        [data-theme="dark"] .category-menu-toggle-btn:hover,
-        .theme-dark .btn--primary:hover,
-        .theme-dark .category-menu-toggle-btn:hover,
-        .dark-theme .btn--primary:hover,
-        .dark-theme .category-menu-toggle-btn:hover {
+        body[theme="dark"] .btn--primary:hover,
+        body[theme="dark"] .category-menu-toggle-btn:hover {
             background-color: #E5E7EB !important;
             color: #000000 !important;
         }
         
-        [data-theme="dark"] .text-primary,
-        .theme-dark .text-primary,
-        .dark-theme .text-primary {
+        body[theme="dark"] .text-primary {
             color: #FFFFFF !important;
         }
         /* --------------------------------------------------- */
