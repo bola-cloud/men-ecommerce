@@ -68,6 +68,32 @@
                 padding-{{ Session::get('direction') === "rtl" ? 'left' : 'right'}}: 1.95rem;
             }
         }
+
+        /* --- Dark Mode Customizations for Monochrome Theme --- */
+        body.theme-dark {
+            --base: #FFFFFF !important;
+            --bs-base-rgb: 255, 255, 255 !important;
+            --web-primary: #FFFFFF !important;
+            --web-primary-rgb: 255, 255, 255 !important;
+        }
+
+        body.theme-dark .btn--primary,
+        body.theme-dark .bg-primary,
+        body.theme-dark .category-menu-toggle-btn {
+            background-color: #FFFFFF !important;
+            color: #000000 !important;
+        }
+
+        body.theme-dark .btn--primary:hover,
+        body.theme-dark .category-menu-toggle-btn:hover {
+            background-color: #E5E7EB !important;
+            color: #000000 !important;
+        }
+        
+        body.theme-dark .text-primary {
+            color: #FFFFFF !important;
+        }
+        /* --------------------------------------------------- */
     </style>
 
     <link rel="stylesheet" href="{{theme_asset(path: 'public/assets/front-end/css/custom.css')}}">
