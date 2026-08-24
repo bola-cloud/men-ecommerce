@@ -66,15 +66,7 @@
         }
 
         /* --- Dark Mode Customizations for Monochrome Theme --- */
-        [theme="dark"] {
-            --bs-primary: #FFFFFF !important;
-            --bs-primary-rgb: 255, 255, 255 !important;
-            --primary-dark: #FFFFFF !important;
-            --primary-light: #FFFFFF !important;
-        }
-
         [theme="dark"] .btn-primary,
-        [theme="dark"] .bg-primary,
         [theme="dark"] .select-category-button {
             background-color: #FFFFFF !important;
             border-color: #FFFFFF !important;
