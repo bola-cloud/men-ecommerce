@@ -1166,7 +1166,7 @@
                     Request::is('admin/system-setup/invoice-settings/') ||
                     Request::is('admin/business-settings/delivery-zone')) ||
                     Request::is('admin/system-setup/db-index') ? 'active' : '' }}"
-                       href="{{ route('admin.system-setup.environment-setup') }}"
+                       href="{{ route('admin.system-setup.app-settings') }}"
                        title="{{ translate('System_Setup') }}">
                         <i class="fi fi-sr-customize"></i>
                         <span class="aside-mini-hidden-element text-truncate flex-grow-1">
