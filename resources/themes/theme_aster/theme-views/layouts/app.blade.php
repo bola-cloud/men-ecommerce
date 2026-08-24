@@ -64,6 +64,34 @@
             color: {{ $web_config['primary_color'] }} !important;
             --bs-btn-border-color: {{ $web_config['primary_color'] }} !important;
         }
+
+        /* --- Dark Mode Customizations for Monochrome Theme --- */
+        [theme="dark"] {
+            --bs-primary: #FFFFFF !important;
+            --bs-primary-rgb: 255, 255, 255 !important;
+            --primary-dark: #FFFFFF !important;
+            --primary-light: #FFFFFF !important;
+        }
+
+        [theme="dark"] .btn-primary,
+        [theme="dark"] .bg-primary,
+        [theme="dark"] .select-category-button {
+            background-color: #FFFFFF !important;
+            border-color: #FFFFFF !important;
+            color: #000000 !important;
+        }
+
+        [theme="dark"] .btn-primary:hover,
+        [theme="dark"] .select-category-button:hover {
+            background-color: #E5E7EB !important;
+            border-color: #E5E7EB !important;
+            color: #000000 !important;
+        }
+        
+        [theme="dark"] .text-primary {
+            color: #FFFFFF !important;
+        }
+        /* --------------------------------------------------- */
     </style>
 
     {!! getSystemDynamicPartials(type: 'analytics_script') !!}
