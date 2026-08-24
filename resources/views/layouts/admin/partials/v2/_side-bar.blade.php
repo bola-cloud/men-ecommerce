@@ -41,7 +41,7 @@
     </div>
 
     {{-- ================= CATALOG ================= --}}
-    {{--
+
     @if (Helpers::module_permission_check('catalog'))
         <div class="v2-ctx-section" data-section="catalog">
             <div class="v2-ctx-head"><div class="v2-ctx-title">{{ translate('catalog') }}</div></div>
@@ -154,7 +154,7 @@
             </div>
         </div>
     @endif
-    --}}
+
 
     {{-- ================= ORDERS ================= --}}
     @if (Helpers::module_permission_check('orders'))
@@ -346,7 +346,7 @@
     @endif
 
     {{-- ================= MARKETING ================= --}}
-    {{--
+
     @if (Helpers::module_permission_check('marketing'))
         <div class="v2-ctx-section" data-section="marketing">
             <div class="v2-ctx-head"><div class="v2-ctx-title">{{ translate('marketing') }}</div></div>
@@ -446,10 +446,10 @@
             @endif
         </div>
     @endif
-    --}}
+
 
     {{-- ================= PEOPLE ================= --}}
-    {{--
+
     @if (Helpers::module_permission_check('people'))
         <div class="v2-ctx-section" data-section="people">
             <div class="v2-ctx-head"><div class="v2-ctx-title">{{ translate('people') }}</div></div>
@@ -505,7 +505,7 @@
                     </a>
                 </div>
 
-                <div class="v2-ctx-group">
+                {{-- <div class="v2-ctx-group">
                     <div class="v2-ctx-group-head"><span>{{ translate('deliveryman') }}</span></div>
                     <a class="v2-nav-item {{ (Request::is('admin/delivery-man/list') || Request::is('admin/delivery-man/update*') || Request::is('admin/delivery-man/order-history-log*') || Request::is('admin/delivery-man/order-wise-earning*')) ? 'v2-is-active' : '' }}" data-item="delivery" href="{{ route('admin.delivery-man.list') }}">
                         <span class="v2-nav-btn"><span class="v2-nav-label">{{ translate('delivery_men') }}</span></span>
@@ -523,7 +523,7 @@
                         <span class="v2-nav-btn"><span class="v2-nav-label">{{ translate('Emergency_Contact') }}</span></span>
                         <div class="v2-nav-right"><button class="v2-pin-btn" type="button" data-pin="dm-emergency" aria-label="Pin"></button></div>
                     </a>
-                </div>
+                </div> --}}
 
                 @if (auth('admin')->user()->admin_role_id == 1)
                     <div class="v2-ctx-group">
@@ -566,10 +566,10 @@
             @endif
         </div>
     @endif
-    --}}
+
 
     {{-- ================= REPORTS ================= --}}
-    {{--
+
     @if (Helpers::module_permission_check('reports'))
         <div class="v2-ctx-section" data-section="reports">
             <div class="v2-ctx-head"><div class="v2-ctx-title">{{ translate('reports') }}</div></div>
@@ -668,7 +668,7 @@
             @endif
         </div>
     @endif
-    --}}
+
 
     {{-- ================= SETTINGS ================= --}}
     @if (Helpers::module_permission_check('business_settings') || Helpers::module_permission_check('system_settings') || Helpers::module_permission_check('3rd_party_setup') || Helpers::module_permission_check('themes_and_addons'))
@@ -744,7 +744,7 @@
                 </div>
             @endif
 
-            {{--
+
             @if (Helpers::module_permission_check('system_settings'))
                 <div class="v2-ctx-group">
                     <div class="v2-ctx-group-head"><span>{{ translate('System_Settings') }}</span></div>
@@ -766,9 +766,9 @@
                     </a>
                 </div>
             @endif
-            --}}
 
-            {{--
+
+
             @if (Helpers::module_permission_check('3rd_party_setup'))
                 <div class="v2-ctx-group">
                     <div class="v2-ctx-group-head"><span>{{ translate('3rd_Party_Setup') }}</span></div>
@@ -841,7 +841,7 @@
                 @endif
             @endif
 
-            {{--
+
             @if (Helpers::module_permission_check('themes_and_addons'))
                 <div class="v2-ctx-group">
                     <div class="v2-ctx-group-head"><span>{{ translate('Themes_&_Addons') }}</span></div>
@@ -871,7 +871,7 @@
                     @endif
                 </div>
             @endif
-            --}}
+
         </div>
     @endif
 

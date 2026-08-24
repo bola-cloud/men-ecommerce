@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عرض فني ومالي - منصة بيع الإلكترونيات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cairo',sans-serif;background:#0a0a1a;color:#e0e0e0;line-height:1.8}
+.page{max-width:900px;margin:0 auto;padding:40px 30px}
+
+/* HERO */
+.hero{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);border-radius:24px;margin-bottom:40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 50%);animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.hero h1{font-size:2.4em;font-weight:900;background:linear-gradient(135deg,#818cf8,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;position:relative}
+.hero p{font-size:1.1em;color:#a5b4fc;position:relative}
+.hero .badge{display:inline-block;background:linear-gradient(135deg,#6366f1,#8b5cf6);padding:8px 24px;border-radius:50px;font-size:0.85em;color:#fff;margin-top:20px;position:relative}
+
+/* SECTIONS */
+.section{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:20px;padding:35px;margin-bottom:30px;backdrop-filter:blur(10px)}
+.section h2{font-size:1.6em;font-weight:800;color:#a5b4fc;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.section h2 .icon{font-size:1.2em}
+.section h3{font-size:1.15em;font-weight:700;color:#c084fc;margin:20px 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+
+/* FEATURE GRID */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:15px 0}
+.feat{background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.12);border-radius:14px;padding:16px;transition:all 0.3s}
+.feat:hover{background:rgba(99,102,241,0.12);transform:translateY(-2px)}
+.feat .ft{font-weight:700;color:#a5b4fc;font-size:0.95em;margin-bottom:4px}
+.feat .fd{font-size:0.82em;color:#94a3b8}
+
+/* ADVANTAGE CARDS */
+.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:15px 0}
+.adv{background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(6,182,212,0.05));border:1px solid rgba(16,185,129,0.15);border-radius:14px;padding:16px;text-align:center}
+.adv .num{font-size:2em;font-weight:900;color:#34d399}
+.adv .label{font-size:0.85em;color:#6ee7b7}
+
+/* PRICING */
+.price-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0}
+.price-card{border-radius:18px;padding:28px;text-align:center;position:relative;overflow:hidden}
+.price-card.basic{background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.05));border:1px solid rgba(99,102,241,0.2)}
+.price-card.pro{background:linear-gradient(135deg,rgba(245,158,11,0.1),rgba(249,115,22,0.05));border:2px solid rgba(245,158,11,0.3)}
+.price-card .pkg{font-size:1.3em;font-weight:800;margin-bottom:8px}
+.price-card.basic .pkg{color:#818cf8}
+.price-card.pro .pkg{color:#fbbf24}
+.price-card .price{font-size:2em;font-weight:900;margin:10px 0}
+.price-card.basic .price{color:#a5b4fc}
+.price-card.pro .price{color:#fcd34d}
+.price-card .cur{font-size:0.5em;font-weight:400}
+.price-card .dur{font-size:0.85em;color:#94a3b8;margin-bottom:15px}
+.price-card ul{list-style:none;text-align:right;font-size:0.85em}
+.price-card li{padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.04);color:#cbd5e1}
+.price-card li::before{content:'✓ ';color:#34d399;font-weight:700}
+.pro-badge{position:absolute;top:14px;left:14px;background:linear-gradient(135deg,#f59e0b,#ef4444);padding:4px 14px;border-radius:20px;font-size:0.7em;font-weight:700;color:#fff}
+
+/* TIMELINE */
+.timeline{position:relative;padding-right:30px;margin:20px 0}
+.timeline::before{content:'';position:absolute;right:8px;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#6366f1,#c084fc,#f472b6);border-radius:3px}
+.tl-item{position:relative;margin-bottom:24px;padding-right:30px}
+.tl-item::before{content:'';position:absolute;right:-26px;top:8px;width:14px;height:14px;border-radius:50%;background:#6366f1;border:3px solid #0a0a1a}
+.tl-item .tl-title{font-weight:700;color:#a5b4fc;font-size:0.95em}
+.tl-item .tl-desc{font-size:0.82em;color:#94a3b8}
+.tl-item .tl-dur{font-size:0.78em;color:#c084fc;font-weight:600}
+
+/* COMPARISON TABLE */
+table{width:100%;border-collapse:collapse;margin:15px 0;font-size:0.85em}
+th{background:rgba(99,102,241,0.15);color:#a5b4fc;padding:12px;text-align:right;font-weight:700}
+td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.04)}
+tr:hover td{background:rgba(99,102,241,0.04)}
+.yes{color:#34d399;font-weight:700}
+.no{color:#ef4444;font-weight:700}
+
+/* ACCEL */
+.accel{background:linear-gradient(135deg,rgba(245,158,11,0.1),rgba(249,115,22,0.05));border:2px solid rgba(245,158,11,0.2);border-radius:16px;padding:24px;margin:20px 0;text-align:center}
+.accel h3{color:#fbbf24;border:none;margin:0 0 8px}
+.accel p{font-size:0.9em;color:#fcd34d}
+
+/* FOOTER */
+.footer{text-align:center;padding:40px;color:#475569;font-size:0.85em}
+.footer .conf{color:#ef4444;font-size:0.75em;margin-top:10px}
+
+@media(max-width:700px){
+  .feat-grid,.adv-grid,.price-cards{grid-template-columns:1fr}
+  .hero h1{font-size:1.6em}
+  .page{padding:20px 15px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HERO -->
+<div class="hero">
+<h1>عرض فني ومالي</h1>
+<p>تطوير منصة إلكترونية متكاملة لبيع وشراء الأجهزة الإلكترونية</p>
+<div class="badge">Multi-Vendor E-Commerce Platform</div>
+</div>
+
+<!-- نبذة عن المشروع -->
+<div class="section">
+<h2><span class="icon">📋</span> نبذة عن المشروع</h2>
+<p>بناء منصة إلكترونية متكاملة متعددة البائعين <strong>(Multi-Vendor Marketplace)</strong> متخصصة في بيع وشراء الأجهزة الإلكترونية (موبايلات، تابلت، لابتوب، ساعات ذكية، سماعات، إكسسوارات) — تدعم المنتجات الجديدة والمستعملة مع ضمان وفحص تقني، وتكامل مع بوابات الدفع الإلكتروني وأنظمة التقسيط المصرية.</p>
+<div class="adv-grid" style="margin-top:20px">
+<div class="adv"><div class="num">+50</div><div class="label">ميزة جاهزة</div></div>
+<div class="adv"><div class="num">2</div><div class="label">لغة (عربي/إنجليزي)</div></div>
+<div class="adv"><div class="num">+10</div><div class="label">بوابة دفع</div></div>
+<div class="adv"><div class="num">3</div><div class="label">لوحات تحكم</div></div>
+</div>
+</div>
+
+<!-- المميزات الأساسية -->
+<div class="section">
+<h2><span class="icon">⚡</span> المميزات الأساسية للمنصة</h2>
+
+<h3>🏪 نظام Multi-Vendor (متعدد البائعين)</h3>
+<div class="feat-grid">
+<div class="feat"><div class="ft">تسجيل البائعين</div><div class="fd">نظام تسجيل وتوثيق البائعين مع مراجعة من الإدارة</div></div>
+<div class="feat"><div class="ft">لوحة تحكم البائع</div><div class="fd">لوحة مستقلة لكل بائع لإدارة منتجاته وطلباته وأرباحه</div></div>
+<div class="feat"><div class="ft">متجر خاص لكل بائع</div><div class="fd">صفحة متجر مخصوصة لكل بائع بشعاره وبياناته</div></div>
+<div class="feat"><div class="ft">نظام سحب الأرباح</div><div class="fd">طلب سحب الأرباح مع مراجعة الإدارة وتتبع الحالة</div></div>
+<div class="feat"><div class="ft">نظام العمولات</div><div class="fd">تحديد نسبة عمولة على كل عملية بيع تلقائياً</div></div>
+<div class="feat"><div class="ft">موافقة على المنتجات</div><div class="fd">مراجعة وقبول/رفض منتجات البائعين قبل النشر</div></div>
+</div>
+
+<h3>📦 إدارة المنتجات</h3>
+<div class="feat-grid">
+<div class="feat"><div class="ft">فئات متعددة (3 مستويات)</div><div class="fd">فئة رئيسية → فرعية → فرعية فرعية</div></div>
+<div class="feat"><div class="ft">البراندات (Brands)</div><div class="fd">إدارة كاملة للعلامات التجارية مع الصور والفلترة</div></div>
+<div class="feat"><div class="ft">خصائص المنتج (Attributes)</div><div class="fd">رام، مساحة تخزين، لون، حالة البطارية...</div></div>
+<div class="feat"><div class="ft">تصنيف جديد/مستعمل</div><div class="fd">فلترة المنتجات حسب الحالة مع وصف تفصيلي</div></div>
+<div class="feat"><div class="ft">معرض صور متعدد</div><div class="fd">رفع صور متعددة لكل منتج مع زووم وعرض شرائح</div></div>
+<div class="feat"><div class="ft">استيراد بالجملة</div><div class="fd">رفع منتجات بالجملة عبر ملف Excel/CSV</div></div>
+<div class="feat"><div class="ft">تنبيه نفاد المخزون</div><div class="fd">إشعارات تلقائية عند وصول المخزون للحد الأدنى</div></div>
+<div class="feat"><div class="ft">طلب إعادة توفير</div><div class="fd">العملاء يطلبون إشعار عند توفر منتج نفد</div></div>
+</div>
+
+<h3>🛒 تجربة الشراء والدفع</h3>
+<div class="feat-grid">
+<div class="feat"><div class="ft">سلة مشتريات ذكية</div><div class="fd">إضافة، تعديل الكميات، حفظ تلقائي</div></div>
+<div class="feat"><div class="ft">Checkout متعدد الخطوات</div><div class="fd">عنوان → طريقة دفع → مراجعة → تأكيد</div></div>
+<div class="feat"><div class="ft">بوابات دفع إلكتروني</div><div class="fd">Paymob, Stripe, PayPal, PayTabs + المزيد</div></div>
+<div class="feat"><div class="ft">دفع عند الاستلام</div><div class="fd">Cash on Delivery مع تأكيد الطلب</div></div>
+<div class="feat"><div class="ft">دفع أوفلاين</div><div class="fd">تحويل بنكي، فودافون كاش، إنستاباي</div></div>
+<div class="feat"><div class="ft">نظام التقسيط</div><div class="fd">تكامل مع ValU, Aman, Souhoola, Contact وغيرهم</div></div>
+<div class="feat"><div class="ft">كوبونات الخصم</div><div class="fd">أكواد خصم بنسبة أو مبلغ ثابت مع شروط استخدام</div></div>
+<div class="feat"><div class="ft">تتبع الطلب</div><div class="fd">تتبع حالة الطلب خطوة بخطوة من التأكيد للاستلام</div></div>
+</div>
+
+<h3>👤 حساب العميل</h3>
+<div class="feat-grid">
+<div class="feat"><div class="ft">تسجيل دخول متعدد</div><div class="fd">بريد إلكتروني، موبايل، Google, Facebook</div></div>
+<div class="feat"><div class="ft">لوحة تحكم العميل</div><div class="fd">طلباتي، عناويني، محفظتي، كوبوناتي</div></div>
+<div class="feat"><div class="ft">قائمة المفضلة</div><div class="fd">حفظ المنتجات المفضلة للشراء لاحقاً</div></div>
+<div class="feat"><div class="ft">مقارنة المنتجات</div><div class="fd">مقارنة مواصفات حتى 4 منتجات جنب بعض</div></div>
+<div class="feat"><div class="ft">محفظة إلكترونية</div><div class="fd">شحن رصيد والدفع من المحفظة مع بونص</div></div>
+<div class="feat"><div class="ft">نقاط الولاء</div><div class="fd">كسب نقاط مع كل عملية شراء وتحويلها لرصيد</div></div>
+<div class="feat"><div class="ft">نظام الإحالة</div><div class="fd">Refer & Earn — ادعو صديقك واكسب رصيد</div></div>
+<div class="feat"><div class="ft">تقييم ومراجعة</div><div class="fd">تقييم المنتجات والبائعين مع صور</div></div>
+</div>
+</div>
+
+<!-- مميزات إضافية -->
+<div class="section">
+<h2><span class="icon">🚀</span> مميزات إضافية ومتقدمة</h2>
+
+<h3>📊 لوحة تحكم الإدارة</h3>
+<div class="feat-grid">
+<div class="feat"><div class="ft">Dashboard تفاعلي</div><div class="fd">إحصائيات فورية: مبيعات، طلبات، بائعين، عملاء</div></div>
+<div class="feat"><div class="ft">تقارير مالية</div><div class="fd">أرباح الإدارة، مبيعات البائعين، معاملات مالية</div></div>
+<div class="feat"><div class="ft">إدارة الطلبات</div><div class="fd">تتبع وتحديث حالة كل طلب مع تفاصيل كاملة</div></div>
+<div class="feat"><div class="ft">إدارة العملاء</div><div class="fd">قائمة العملاء، تفاصيل الحساب، سجل الطلبات</div></div>
+<div class="feat"><div class="ft">نظام الأدوار والصلاحيات</div><div class="fd">إنشاء أدوار مخصصة للموظفين بصلاحيات محددة</div></div>
+<div class="feat"><div class="ft">فواتير PDF</div><div class="fd">إنشاء فواتير احترافية تلقائياً لكل طلب</div></div>
+</div>
+
+<h3>📣 التسويق والعروض</h3>
+<div class="feat-grid">
+<div class="feat"><div class="ft">Flash Deals</div><div class="fd">عروض محدودة بوقت مع عداد تنازلي</div></div>
+<div class="feat"><div class="ft">عرض اليوم</div><div class="fd">Deal of the Day — منتج مميز يومياً</div></div>
+<div class="feat"><div class="ft">Featured Deals</div><div class="fd">عروض مميزة تظهر في الصفحة الرئيسية</div></div>
+<div class="feat"><div class="ft">تخفيضات التصفية</div><div class="fd">Clearance Sale بأسعار مخفضة</div></div>
+<div class="feat"><div class="ft">بانرات إعلانية</div><div class="fd">إدارة كاملة للبانرات في الصفحة الرئيسية</div></div>
+<div class="feat"><div class="ft">إشعارات Push</div><div class="fd">إرسال إشعارات للعملاء عبر Firebase</div></div>
+</div>
+
+<h3>🔧 مميزات متخصصة (شبيهة بالمنافسين)</h3>
+<div class="feat-grid">
+<div class="feat"><div class="ft">دليل الأجهزة</div><div class="fd">صفحة مواصفات ومقارنات تقنية بين الأجهزة</div></div>
+<div class="feat"><div class="ft">مدونة تقنية (Blog)</div><div class="fd">نشر مقالات تقنية ومراجعات لتحسين SEO</div></div>
+<div class="feat"><div class="ft">صفحة فحص الأجهزة</div><div class="fd">نظام فحص وتقييم حالة الأجهزة المستعملة</div></div>
+<div class="feat"><div class="ft">حجز خدمة الصيانة</div><div class="fd">نظام حجز مواعيد صيانة مع مراكز معتمدة</div></div>
+<div class="feat"><div class="ft">نظام POS</div><div class="fd">نقطة بيع للمحلات الفعلية متكاملة مع المنصة</div></div>
+<div class="feat"><div class="ft">SEO متقدم</div><div class="fd">أدوات تحسين محركات البحث + Sitemap + Meta Tags</div></div>
+</div>
+
+<h3>🌐 الدعم التقني</h3>
+<div class="feat-grid">
+<div class="feat"><div class="ft">ثنائي اللغة (RTL)</div><div class="fd">عربي وإنجليزي مع دعم كامل للاتجاه</div></div>
+<div class="feat"><div class="ft">متجاوب مع الموبايل</div><div class="fd">تصميم Responsive يعمل على جميع الأجهزة</div></div>
+<div class="feat"><div class="ft">نظام محادثات</div><div class="fd">تواصل مباشر بين العملاء والبائعين</div></div>
+<div class="feat"><div class="ft">تذاكر الدعم الفني</div><div class="fd">نظام Support Tickets لمتابعة المشاكل</div></div>
+<div class="feat"><div class="ft">قوالب البريد</div><div class="fd">إيميلات تلقائية احترافية لكل حدث</div></div>
+<div class="feat"><div class="ft">Firebase Cloud Messaging</div><div class="fd">إشعارات فورية عبر المتصفح والموبايل</div></div>
+</div>
+</div>
+
+<!-- جدول المقارنة -->
+<div class="section">
+<h2><span class="icon">⚖️</span> لماذا نحن الاختيار الأفضل؟</h2>
+<table>
+<tr><th>الميزة</th><th>منصتنا</th><th>الحلول التقليدية</th></tr>
+<tr><td>Multi-Vendor كامل</td><td class="yes">✅ جاهز</td><td class="no">❌ يحتاج بناء من الصفر</td></tr>
+<tr><td>لوحة تحكم البائعين</td><td class="yes">✅ مستقلة ومتكاملة</td><td class="no">❌ غير متوفرة</td></tr>
+<tr><td>+10 بوابة دفع</td><td class="yes">✅ جاهزة</td><td class="no">⚠️ 1-2 بوابة فقط</td></tr>
+<tr><td>نظام التقسيط</td><td class="yes">✅ ValU, Aman, Souhoola</td><td class="no">❌ غير متوفر</td></tr>
+<tr><td>محفظة + نقاط ولاء</td><td class="yes">✅ جاهز</td><td class="no">❌ غير متوفر</td></tr>
+<tr><td>مقارنة المنتجات</td><td class="yes">✅ جاهز</td><td class="no">❌ غير متوفر</td></tr>
+<tr><td>POS نقطة بيع</td><td class="yes">✅ متكامل</td><td class="no">❌ غير متوفر</td></tr>
+<tr><td>تقارير مالية متقدمة</td><td class="yes">✅ شاملة</td><td class="no">⚠️ بسيطة</td></tr>
+<tr><td>SEO + Blog</td><td class="yes">✅ متقدم</td><td class="no">⚠️ أساسي</td></tr>
+<tr><td>Refer & Earn</td><td class="yes">✅ جاهز</td><td class="no">❌ غير متوفر</td></tr>
+<tr><td>تصميم مخصوص (Custom)</td><td class="yes">✅ حسب طلبكم</td><td class="yes">✅ حسب الطلب</td></tr>
+<tr><td>سرعة التسليم</td><td class="yes">✅ شهر - 3 شهور</td><td class="no">⚠️ 6-12 شهر</td></tr>
+</table>
+</div>
+
+<!-- الباقات والأسعار -->
+<div class="section">
+<h2><span class="icon">💰</span> الباقات والأسعار</h2>
+<div class="price-cards">
+<div class="price-card basic">
+<div class="pkg">الباقة الأساسية</div>
+<div class="price">50,000 <span class="cur">ج.م</span></div>
+<div class="dur">مدة التنفيذ: 4-6 أسابيع</div>
+<ul>
+<li>تصميم واجهة مخصوصة بالكامل</li>
+<li>نظام Multi-Vendor كامل</li>
+<li>لوحة تحكم الإدارة والبائعين</li>
+<li>إدارة المنتجات والفئات والبراندات</li>
+<li>سلة مشتريات + Checkout</li>
+<li>بوابات دفع إلكتروني (Paymob)</li>
+<li>دفع عند الاستلام + أوفلاين</li>
+<li>حساب العميل + مفضلة</li>
+<li>دعم ثنائي اللغة (عربي/إنجليزي)</li>
+<li>تصميم متجاوب (Responsive)</li>
+<li>SEO أساسي</li>
+<li>إشعارات بريد إلكتروني</li>
+</ul>
+</div>
+<div class="price-card pro">
+<div class="pro-badge">⭐ الأكثر طلباً</div>
+<div class="pkg">الباقة الشاملة</div>
+<div class="price">80,000 <span class="cur">ج.م</span></div>
+<div class="dur">مدة التنفيذ: 2-3 شهور</div>
+<ul>
+<li>كل مميزات الباقة الأساسية</li>
+<li>تصنيف جديد/مستعمل + حالة البطارية</li>
+<li>تكامل أنظمة التقسيط (ValU, Aman...)</li>
+<li>محفظة إلكترونية + نقاط ولاء</li>
+<li>مقارنة المنتجات</li>
+<li>نظام POS (نقطة بيع)</li>
+<li>مدونة تقنية (Blog)</li>
+<li>دليل الأجهزة والمقارنات</li>
+<li>صفحة فحص الأجهزة</li>
+<li>نظام حجز صيانة</li>
+<li>Flash Deals + عروض يومية</li>
+<li>Refer & Earn</li>
+<li>تقارير مالية متقدمة</li>
+<li>SEO متقدم + Sitemap</li>
+<li>Push Notifications (Firebase)</li>
+<li>نظام محادثات + تذاكر دعم</li>
+</ul>
+</div>
+</div>
+
+<div class="accel">
+<h3>⚡ خيار التسليم السريع</h3>
+<p>يمكن تقليل مدة التنفيذ بنسبة تصل إلى <strong>50%</strong> من خلال مضاعفة ساعات العمل وتخصيص فريق إضافي — يتم الاتفاق على التكلفة الإضافية حسب الجدول الزمني المطلوب.</p>
+</div>
+</div>
+
+<!-- مراحل التنفيذ -->
+<div class="section">
+<h2><span class="icon">📅</span> مراحل التنفيذ</h2>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-title">المرحلة 1: التحليل والتصميم</div>
+<div class="tl-desc">تحليل المتطلبات — تصميم UI/UX — اعتماد التصميم النهائي</div>
+<div class="tl-dur">1-2 أسبوع</div>
+</div>
+<div class="tl-item">
+<div class="tl-title">المرحلة 2: تطوير الواجهة الأمامية</div>
+<div class="tl-desc">بناء التصميم المخصوص — الصفحة الرئيسية — صفحات المنتجات — التصفية — Responsive</div>
+<div class="tl-dur">2-4 أسابيع</div>
+</div>
+<div class="tl-item">
+<div class="tl-title">المرحلة 3: تطوير الأنظمة الخلفية</div>
+<div class="tl-desc">إعداد قاعدة البيانات — بوابات الدفع — نظام الطلبات — لوحات التحكم</div>
+<div class="tl-dur">2-4 أسابيع</div>
+</div>
+<div class="tl-item">
+<div class="tl-title">المرحلة 4: المميزات المتقدمة</div>
+<div class="tl-desc">التقسيط — فحص الأجهزة — المدونة — الدليل — POS (الباقة الشاملة)</div>
+<div class="tl-dur">2-3 أسابيع</div>
+</div>
+<div class="tl-item">
+<div class="tl-title">المرحلة 5: الاختبار والإطلاق</div>
+<div class="tl-desc">اختبارات شاملة — إصلاح الأخطاء — إعداد السيرفر — الإطلاق النهائي</div>
+<div class="tl-dur">1 أسبوع</div>
+</div>
+</div>
+</div>
+
+<!-- شروط وملاحظات -->
+<div class="section">
+<h2><span class="icon">📌</span> ملاحظات مهمة</h2>
+<ul style="list-style:none;font-size:0.9em">
+<li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)">✅ يتم تسليم الكود المصدري (Source Code) بالكامل عند انتهاء المشروع</li>
+<li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)">✅ دعم فني مجاني لمدة شهر بعد الإطلاق</li>
+<li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)">✅ تدريب على استخدام لوحة التحكم</li>
+<li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)">⚠️ الأسعار لا تشمل: الاستضافة، الدومين، اشتراكات بوابات الدفع</li>
+<li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)">⚠️ المحتوى (صور المنتجات والبيانات) مسؤولية العميل</li>
+<li style="padding:8px 0">💡 يمكن تسريع التنفيذ بمضاعفة ساعات العمل — يُناقش الجدول الزمني والتكلفة الإضافية حسب الاحتياج</li>
+</ul>
+</div>
+
+<!-- طريقة الدفع -->
+<div class="section">
+<h2><span class="icon">💳</span> طريقة الدفع</h2>
+<div class="feat-grid">
+<div class="feat"><div class="ft">دفعة أولى - 40%</div><div class="fd">عند توقيع العقد والبدء في التصميم</div></div>
+<div class="feat"><div class="ft">دفعة ثانية - 30%</div><div class="fd">بعد اعتماد التصميم والبدء في التطوير</div></div>
+<div class="feat"><div class="ft">دفعة ثالثة - 20%</div><div class="fd">عند الانتهاء من التطوير وبدء الاختبارات</div></div>
+<div class="feat"><div class="ft">دفعة أخيرة - 10%</div><div class="fd">عند الإطلاق النهائي وتسليم المشروع</div></div>
+</div>
+</div>
+
+<div class="footer">
+<p>هذا العرض صالح لمدة <strong>30 يوماً</strong> من تاريخ الإرسال</p>
+<p class="conf">⚠️ سري وخاص — لا يُشارك مع أطراف أخرى</p>
+</div>
+
+</div>
+</body>
+</html>

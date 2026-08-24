@@ -1144,7 +1144,7 @@
                 </li>
             @endif
 
-            {{--
+
             @if(Helpers::module_permission_check('system_settings'))
                 <li class="nav-item nav-item_title">
                     <small class="nav-subtitle" title="">
@@ -1367,7 +1367,7 @@
                 @endif
 
             @endif -->
-            --}}
+
 
             <?php $checkSetupGuideRequirements = checkSetupGuideRequirements(panel: 'admin'); ?>
 
