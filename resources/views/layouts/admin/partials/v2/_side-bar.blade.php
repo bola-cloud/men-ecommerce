@@ -784,12 +784,12 @@
                         <span class="v2-nav-btn"><span class="v2-nav-label">{{ translate('Marketing_Tools') }}</span></span>
                         <div class="v2-nav-right"><button class="v2-pin-btn" type="button" data-pin="marketing-tools" aria-label="Pin"></button></div>
                     </a>
-                    @if ($v2Ai)
+                    <!-- @if ($v2Ai)
                         <a class="v2-nav-item {{ (Request::is('admin/third-party/ai-setting') || Request::is('admin/third-party/ai-setting/vendors-usage-limits') || Request::is('admin/third-party/ai-setting/customers-usage-limits')) ? 'v2-is-active' : '' }}" data-item="ai-setup" href="{{ route('admin.third-party.ai-setting.index') }}">
                             <span class="v2-nav-btn"><span class="v2-nav-label">{{ translate('AI_Setup') }}</span></span>
                             <div class="v2-nav-right"><button class="v2-pin-btn" type="button" data-pin="ai-setup" aria-label="Pin"></button></div>
                         </a>
-                    @endif
+                    @endif -->
                     <a class="v2-nav-item {{ (Request::is('admin/third-party/mail') || Request::is('admin/third-party/sms-module') || Request::is('admin/third-party/recaptcha') || Request::is('admin/third-party/social-login/view') || Request::is('admin/third-party/social-media-chat/view') || Request::is('admin/third-party/storage-connection-settings/index') || Request::is('admin/third-party/map-api')) ? 'v2-is-active' : '' }}" data-item="other-config" href="{{ route('admin.third-party.social-login.view') }}">
                         <span class="v2-nav-btn"><span class="v2-nav-label">{{ translate('Other_Configuration') }}</span></span>
                         <div class="v2-nav-right"><button class="v2-pin-btn" type="button" data-pin="other-config" aria-label="Pin"></button></div>
@@ -841,7 +841,7 @@
             @endif
 
 
-            @if (Helpers::module_permission_check('themes_and_addons'))
+            <!-- @if (Helpers::module_permission_check('themes_and_addons'))
                 <div class="v2-ctx-group">
                     <div class="v2-ctx-group-head"><span>{{ translate('Themes_&_Addons') }}</span></div>
                     <a class="v2-nav-item {{ Request::is('admin/system-setup/theme/setup') ? 'v2-is-active' : '' }}" data-item="theme-setup" href="{{ route('admin.system-setup.theme.setup') }}">
@@ -869,7 +869,7 @@
                         @endforeach
                     @endif
                 </div>
-            @endif
+            @endif -->
 
         </div>
     @endif
