@@ -796,7 +796,6 @@
                     </a>
                 </div>
             @endif
-            --}}
 
             @if (count($v2ThemeRoutes) > 0)
                 @php
